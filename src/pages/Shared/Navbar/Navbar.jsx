@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import Login from "../../Login/Login";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import useAdmin from "../../../hooks/useAdmin";
+import useInstructor from "../../../hooks/useInstructor";
 
 
 const Navbar = () => {
 
 const {user} = useContext(AuthContext)
+const [isAdmin]= useAdmin()
+const [isInstructor]= useInstructor()
       return (
           <div className="navbar bg-base-100">
           <div className="navbar-start">
@@ -20,7 +23,7 @@ const {user} = useContext(AuthContext)
                 <li><Link to='/home'>Classes</Link></li>
              
                 {
-                  user &&    <li><Link to='/home'>Dashboard </Link></li>
+                  isAdmin &&    <li><Link to='/home'>Dashboard </Link></li>
                 }
               </ul>
             </div>
@@ -33,7 +36,10 @@ const {user} = useContext(AuthContext)
                 <li><Link to='/home'>Classes</Link></li>
              
                 {
-                  user &&    <li><Link to='/home'>Dashboard </Link></li>
+                  isAdmin &&    <li><Link to='/home'>isDashboard </Link></li>
+                }
+                {
+                  isInstructor &&    <li><Link to='/home'>isInstructor </Link></li>
                 }
             </ul>
           </div>

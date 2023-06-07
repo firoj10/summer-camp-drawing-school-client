@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
@@ -16,22 +16,40 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const onSubmit = data => {
-        console.log(data.name, data.email, data.password, data.photoUrl);
-        createUser(data.email, data.password ,data.photoURL)
-            .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser);
-                updateUserProfile(data.name, data.photoURL)
-                    .then(() => {
-                        console.log('user profile info updated')
-                        alert('user profile info updated')
-                        reset();
-                     
-                        navigate('/');
-
-                    })
-                    .catch(error => console.log(error))
+      createUser(data.email, data.password)
+      .then(result => {
+        const logedUser = result.user;
+        console.log(logedUser)
+        updateUserProfile(data.name, data.photoUrl)
+          .then(() => {
+            const saveUser = { name: data.name, email: data.email }
+            fetch('http://localhost:5000/student', {
+              method: "POST",
+              headers: {
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(saveUser)
             })
+              .then(res => res.json())
+              .then(data => {
+                if (data.insertedId) {
+                  // reset()
+                  // Swal.fire({
+                  //   position: 'top-end',
+                  //   icon: 'success',
+                  //   title: 'User created',
+                  //   showConfirmButton: false,
+                  //   timer: 1500
+                  // })
+                  navigate('/')
+                }
+              })
+            // console.log('user profile updated')
+
+          })
+          .catch(error => console.log(error))
+
+      })
     };
 
   const validatePassword = (value) => {
@@ -90,3 +108,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+

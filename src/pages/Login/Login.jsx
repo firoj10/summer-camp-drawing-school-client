@@ -1,9 +1,10 @@
 
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { RiEyeLine, RiEyeOffLine } from 'react-icons/ri';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -73,6 +74,7 @@ const Login = () => {
                 <p>create a new user<Link to='/signup'>Signup</Link></p>
 
                 <input type="submit" value="Login" />
+                <SocialLogin></SocialLogin>
             </form>
             </div>
 

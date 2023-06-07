@@ -1,9 +1,10 @@
+import AllStudent from "../../DashBoard/AllStudent/AllStudent";
 
 const Home = () => {
 
     return (
         <div>
-         <h2>home</h2>
+           <AllStudent></AllStudent>
         </div>
     );
 };
