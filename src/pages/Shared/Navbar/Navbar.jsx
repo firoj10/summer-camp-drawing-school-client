@@ -6,10 +6,16 @@ import useInstructor from "../../../hooks/useInstructor";
 
 
 const Navbar = () => {
-
-  const { user } = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
   const [isAdmin] = useAdmin()
   const [isInstructor] = useInstructor()
+
+  const handleLogout = ()=>{
+    logOut()
+    .then(()=>{})
+    .catch(error=> console.log(error))
+  }
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -41,19 +47,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {
-
-          user ? <>
-            <span>{user?.reloadUserInfo
-              .photoUrl
-
-            }</span>
-            {/* <button >Log Out</button> */}
-          </> : <>
-            <button ><Link to='/login'>Login</Link></button>
-
-          </>
-        }
+      {
+  
+  user ? <>
+  <span>{user?.responseURL}</span>
+  <button onClick={handleLogout} className="btn btn-active btn-ghost">Log Out</button>
+  </> :<>
+  <li><Link to="/login">Login</Link></li>
+  </>
+ }
       </div>
     </div>
 
