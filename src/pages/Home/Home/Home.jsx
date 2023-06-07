@@ -1,10 +1,10 @@
-import AllStudent from "../../DashBoard/AllStudent/AllStudent";
+
 
 const Home = () => {
 
     return (
         <div>
-           <AllStudent></AllStudent>
+           <h2>hoho</h2>
         </div>
     );
 };

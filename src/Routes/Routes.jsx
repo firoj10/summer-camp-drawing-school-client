@@ -6,6 +6,9 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import Dashboard from "../Layout/Dashboard";
+import AllStudent from "../pages/DashBoard/AllStudent/AllStudent";
+import ManageClass from "../pages/DashBoard/ManageClass/ManageClass";
 
  
 
@@ -28,6 +31,20 @@ import SignUp from "../pages/SignUp/SignUp";
             element:<SignUp></SignUp>
         },
        
-  ]}
+  ]},
+  {
+
+    path:'dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+      {
+        path: "allstudent",
+        element: <AllStudent></AllStudent>
+      },
+      {
+        path: "manageclass",
+        element: <ManageClass></ManageClass>
+      },
+ ]}
 
 ]);

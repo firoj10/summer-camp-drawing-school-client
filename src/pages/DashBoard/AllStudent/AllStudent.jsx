@@ -2,10 +2,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-
 const AllStudent = () => {
-   
-
+  
     const { data: student = [], refetch } = useQuery(['student'], async () => {
         const res = await axios.get('http://localhost:5000/student')
         return res.data;
