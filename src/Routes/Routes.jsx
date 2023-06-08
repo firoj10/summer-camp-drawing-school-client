@@ -9,6 +9,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import AllStudent from "../pages/DashBoard/AllStudent/AllStudent";
 import AddClass from "../pages/DashBoard/addClass/addClass";
+import MyClass from "../pages/DashBoard/MyClass/MyClass";
 
 
  
@@ -45,6 +46,10 @@ import AddClass from "../pages/DashBoard/addClass/addClass";
       {
         path: "addclass",
         element: <AddClass></AddClass>
+      },
+      {
+        path: "allclass",
+        element: <MyClass></MyClass>
       },
  ]}
 

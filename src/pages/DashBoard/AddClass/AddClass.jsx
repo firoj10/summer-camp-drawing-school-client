@@ -23,23 +23,24 @@ const AddClass = () => {
                 const newClass = { classname ,instructorname,  instructoremail, availableseats ,status, price, classphoto,}
                 console.log(newClass);
                
-                //send data to server
-            //     fetch('http://localhost:5000/student/admin/', {
-            //         method: 'POST',
-            //         headers: {
-            //             'content-type': 'application/json'
-            //         },
-            //         body: JSON.stringify(newToy)
-            //     })
-            //         .then(res => res.json())
-            //         .then(data => {
-            //             console.log(data)
-            //             if (data.insertedId) {
-            //                alert('add successfull')
-            //             }
-            //         })
-            // }
+               // send data to server
+
+                fetch('http://localhost:5000/addclass', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(newClass)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.insertedId) {
+                           alert('add successfull')
+                        }
+                    })
             }
+         
             return (
                 <div className="bg-[#F4F3F0] p-24">
                     <h2 className="text-3xl font-extralight  text-orange-900">add a class</h2>

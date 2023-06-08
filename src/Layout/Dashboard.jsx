@@ -23,22 +23,19 @@ const Dashboard = () => {
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-          {/* Sidebar content here */}
-
           {
             isAdmin ?
               <>      <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
-                <li><NavLink to="/dashboard/manageclass">admin Classes</NavLink></li></> : null
-          }
-          {
-            instractor &&
+                <li><NavLink to="/dashboard/manageclass">admin Classes</NavLink></li></> : 
+          
+            instractor ?
               <>      <li><NavLink to="/dashboard/allstudent">instractor</NavLink></li>
-                <li><NavLink to="/dashboard/addclass">instractor</NavLink></li></> 
-          }
-          {
-            user || !isAdmin ?
+                <li><NavLink to="/dashboard/allclass">My Class</NavLink></li>
+                </> :
+          
+            user  ?
               <>      <li><NavLink t>user</NavLink></li>
-                <li><NavLink >user </NavLink></li></> : null
+                <li><NavLink >user </NavLink></li></> :null
           }
 
         </ul>
