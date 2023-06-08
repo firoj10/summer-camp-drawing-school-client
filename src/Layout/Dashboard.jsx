@@ -26,10 +26,10 @@ const Dashboard = () => {
           {
             isAdmin ?
               <>      <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
-                <li><NavLink to="/dashboard/manageclass">admin Classes</NavLink></li></> : 
+                <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li></> : 
           
             instractor ?
-              <>      <li><NavLink to="/dashboard/allstudent">instractor</NavLink></li>
+              <>      <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
                 <li><NavLink to="/dashboard/allclass">My Class</NavLink></li>
                 </> :
           
