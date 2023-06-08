@@ -8,7 +8,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import AllStudent from "../pages/DashBoard/AllStudent/AllStudent";
-import ManageClass from "../pages/DashBoard/ManageClass/ManageClass";
+import AddClass from "../pages/DashBoard/addClass/addClass";
+
 
  
 
@@ -42,8 +43,8 @@ import ManageClass from "../pages/DashBoard/ManageClass/ManageClass";
         element: <AllStudent></AllStudent>
       },
       {
-        path: "manageclass",
-        element: <ManageClass></ManageClass>
+        path: "addclass",
+        element: <AddClass></AddClass>
       },
  ]}
 

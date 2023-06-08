@@ -33,6 +33,7 @@ const Navbar = () => {
             }
           </ul>
         </div>
+       
         <a className="btn btn-ghost normal-case text-xl"> Drawing School</a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -50,7 +51,7 @@ const Navbar = () => {
       {
   
   user ? <>
-  <span>{user?.responseURL}</span>
+    <img src={user?.photoURL}  className='rounded-full h-12  mx-2 w-12' alt="img"  />
   <button onClick={handleLogout} className="btn btn-active btn-ghost">Log Out</button>
   </> :<>
   <li><Link to="/login">Login</Link></li>

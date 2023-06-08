@@ -19,7 +19,7 @@ const SignUp = () => {
       createUser(data.email, data.password)
       .then(result => {
         const logedUser = result.user;
-        console.log(logedUser)
+        console.log( '111111111111',data.name, data.photo)
         updateUserProfile(data.name, data.photoUrl)
           .then(() => {
             const saveUser = { name: data.name, email: data.email }
@@ -99,7 +99,7 @@ const SignUp = () => {
         {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
         <label htmlFor="photoUrl">Photo URL:</label>
-        <input type="text" id="photoUrl" placeholder='photo url' {...register('photoURL')} />
+        <input type="text" id="photoUrl" placeholder='photo url' {...register('photo')} />
 
         <input type="submit" className='p-10' value="Register" />
       </form>
