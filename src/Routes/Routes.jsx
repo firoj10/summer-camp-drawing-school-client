@@ -10,6 +10,8 @@ import Dashboard from "../Layout/Dashboard";
 import AllStudent from "../pages/DashBoard/AllStudent/AllStudent";
 import AddClass from "../pages/DashBoard/addClass/addClass";
 import MyClass from "../pages/DashBoard/MyClass/MyClass";
+import Instructors from "../pages/Instructors/Instructors";
+import Classes from "../pages/Classes/Classes";
 
 
  
@@ -35,6 +37,14 @@ import MyClass from "../pages/DashBoard/MyClass/MyClass";
        
   ]},
   {
+    path: "ins",
+    element: <Instructors></Instructors>
+  },
+  {
+    path: "classes",
+    element: <Classes></Classes>
+  },
+  {
 
     path:'dashboard',
     element:<Dashboard></Dashboard>,
@@ -47,10 +57,8 @@ import MyClass from "../pages/DashBoard/MyClass/MyClass";
         path: "addclass",
         element: <AddClass></AddClass>
       },
-      {
-        path: "allclass",
-        element: <MyClass></MyClass>
-      },
+      
+      
  ]}
 
 ]);

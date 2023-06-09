@@ -7,7 +7,6 @@ import { AuthContext } from "../providers/AuthProvider";
 const useAdmin = () => {
     const {user, loading}=useContext(AuthContext)
    
-
         const {data: isAdmin, isLoading: isAdminLoading } = useQuery({
           queryKey: ['isAdmin', user?.email],
           enabled: !loading,

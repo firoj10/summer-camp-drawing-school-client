@@ -18,11 +18,11 @@ const SignUp = () => {
     const onSubmit = data => {
       createUser(data.email, data.password)
       .then(result => {
-        const logedUser = result.user;
-        console.log( '111111111111',data.name, data.photo)
-        updateUserProfile(data.name, data.photoUrl)
+        const user = result.user;
+        console.log( user)
+        updateUserProfile(data.name, data.url)
           .then(() => {
-            const saveUser = { name: data.name, email: data.email }
+            const saveUser = { name: data.name, email: data.email, photo: data.url }
             fetch('http://localhost:5000/student', {
               method: "POST",
               headers: {
@@ -99,7 +99,7 @@ const SignUp = () => {
         {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
         <label htmlFor="photoUrl">Photo URL:</label>
-        <input type="text" id="photoUrl" placeholder='photo url' {...register('photo')} />
+        <input type="url" id="photoUrl" placeholder='photo url' {...register('url')} />
 
         <input type="submit" className='p-10' value="Register" />
       </form>

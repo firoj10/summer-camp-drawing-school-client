@@ -34,7 +34,7 @@ const Dashboard = () => {
                 </> :
           
             user  ?
-              <>      <li><NavLink t>user</NavLink></li>
+              <>      <li><NavLink >user</NavLink></li>
                 <li><NavLink >user </NavLink></li></> :null
           }
 

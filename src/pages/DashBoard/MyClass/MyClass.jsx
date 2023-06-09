@@ -47,9 +47,9 @@ const MyClass = () => {
                         <td>{user.price}</td>
                         <td> 
                        <div className='flex'>
-                       <button onClick={() => handleMakeStatus(user)} className="btn btn-xs mx-2">panding</button>
-                        <button className="btn btn-xs mx-2">Denay</button>
-                        <button className="btn btn-xs mx-2">Approve</button>
+                       <button onClick={() => handleMakeStatus(user)} className="btn btn-xs mx-2  btn-primary">Approve</button>
+                                    <button className="btn btn-xs btn-secondary">Denay</button>
+                                    <button className="btn btn-xs btn-accent">panding</button>
                        </div>
                         </td>  
                     </tr>)}
