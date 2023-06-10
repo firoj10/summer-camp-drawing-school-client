@@ -9,10 +9,10 @@ import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import AllStudent from "../pages/DashBoard/AllStudent/AllStudent";
 import AddClass from "../pages/DashBoard/addClass/addClass";
-import MyClass from "../pages/DashBoard/MyClass/MyClass";
 import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
 import MySelectedClasses from "../pages/DashBoard/MySelectedClasses/MySelectedClasses";
+import Payment from "../Payment/Payment";
 
 
  
@@ -58,10 +58,20 @@ import MySelectedClasses from "../pages/DashBoard/MySelectedClasses/MySelectedCl
       {
         path: "addclass",
         element: <AddClass></AddClass>
+      
       },
       {
         path: "myselectedclasses",
         element: <MySelectedClasses></MySelectedClasses>
+      },
+      {
+        path: "myselectedclasses",
+        element: <MySelectedClasses></MySelectedClasses>
+      },
+      {
+        path: "payment/:id",
+        element: <Payment></Payment>,
+        loader: ({params}) => fetch(`http://localhost:5000/selectclass/${params.id}`)
       },
       
       

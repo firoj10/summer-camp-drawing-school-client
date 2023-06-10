@@ -5,7 +5,7 @@ import useClasses from "../../../hooks/useClasses";
 
 
 const MySelectedClasses = () => {
-    const [classes, refetch]= useClasses()
+    const [classes, refetch] = useClasses()
     // const total = cart.reduce((sum, item) => item.price + sum, 0)
 
 
@@ -42,13 +42,11 @@ const MySelectedClasses = () => {
     }
     return (
         <div>
-{/* const classItem = {classItemId: _id, classname, classphoto, price, instructorname, email:user.email} */}
+            {/* const classItem = {classItemId: _id, classname, classphoto, price, instructorname, email:user.email} */}
             <div className="uppercase  font-semibold flex h-10 justify-evenly">
                 {/* <h3 className="text-3xl">Total items{cart.length}</h3>
                 <h3 className="text-3xl text-center border-spacing-0">Total Price{price}</h3> */}
-                <Link to="/dashboard/payment">
-                    <button className="btn btn-worning btn-sm">PaY</button>
-                </Link>
+
             </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
@@ -84,11 +82,13 @@ const MySelectedClasses = () => {
                                 <td>
                                     <button onClick={() => handleDelete(item)} className="btn btn-ghost btn-lg bg-red-500 text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
+                                <Link to={`/dashboard/payment/${item._id}`}><button className="btn btn-worning btn-sm">PaY</button> </Link>
+                             
                             </tr>)
 
                         }
-                         </tbody>
-                     </table>
+                    </tbody>
+                </table>
             </div>
         </div>
     );
