@@ -34,7 +34,7 @@ const Dashboard = () => {
                 </> :
           
             user  ?
-              <>      <li><NavLink >user</NavLink></li>
+              <>      <li><NavLink to='/dashboard/myselectedclasses'>myselectedclasses</NavLink></li>
                 <li><NavLink >user </NavLink></li></> :null
           }
 

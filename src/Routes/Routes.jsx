@@ -12,6 +12,7 @@ import AddClass from "../pages/DashBoard/addClass/addClass";
 import MyClass from "../pages/DashBoard/MyClass/MyClass";
 import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
+import MySelectedClasses from "../pages/DashBoard/MySelectedClasses/MySelectedClasses";
 
 
  
@@ -34,16 +35,17 @@ import Classes from "../pages/Classes/Classes";
             path:'signup',
             element:<SignUp></SignUp>
         },
+        {
+          path: "ins",
+          element: <Instructors></Instructors>
+        },
+        {
+          path: "classes",
+          element: <Classes></Classes>
+        },
        
   ]},
-  {
-    path: "ins",
-    element: <Instructors></Instructors>
-  },
-  {
-    path: "classes",
-    element: <Classes></Classes>
-  },
+ 
   {
 
     path:'dashboard',
@@ -56,6 +58,10 @@ import Classes from "../pages/Classes/Classes";
       {
         path: "addclass",
         element: <AddClass></AddClass>
+      },
+      {
+        path: "myselectedclasses",
+        element: <MySelectedClasses></MySelectedClasses>
       },
       
       
