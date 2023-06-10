@@ -45,7 +45,7 @@ const MySelectedClasses = () => {
 {/* const classItem = {classItemId: _id, classname, classphoto, price, instructorname, email:user.email} */}
             <div className="uppercase  font-semibold flex h-10 justify-evenly">
                 {/* <h3 className="text-3xl">Total items{cart.length}</h3>
-                <h3 className="text-3xl">Total Price{price}</h3> */}
+                <h3 className="text-3xl text-center border-spacing-0">Total Price{price}</h3> */}
                 <Link to="/dashboard/payment">
                     <button className="btn btn-worning btn-sm">PaY</button>
                 </Link>
