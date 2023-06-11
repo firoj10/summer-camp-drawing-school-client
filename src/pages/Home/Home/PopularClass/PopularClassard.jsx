@@ -5,7 +5,7 @@ const PopularClassard = ({ classe }) => {
       <div className="">
         <div className="card card-compact bg-base-100 shadow-xl">
           <figure>
-            <img src={classe?.classphoto} alt="Shoes" />
+            <img style={{ width: '900px', height: '300px' }} src={classe?.classphoto} alt="Shoes" />
           </figure>
           <div className="card-body">
             <h2 className="card-title"> Class Name: {classe.classname}</h2>

@@ -111,7 +111,7 @@ const SignUp = () => {
         <label htmlFor="photoUrl">Photo URL:</label>
         <input className="input input-bordered"   placeholder="confirphotoUrlmPassword"   type="url" id="photoUrl"  {...register('url')} />
         </div>
-        <input type="submit" className='p-10' value="Register" />
+        <input type="submit" className='p-10 btn btn-active btn-accent' value="Register" />
       </form>
     </div>
     </div>

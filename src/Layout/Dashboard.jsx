@@ -3,6 +3,7 @@ import useAdmin from "../hooks/useAdmin";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import useInstructor from "../hooks/useInstructor";
+import { FaBook, FaHome, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
@@ -26,25 +27,25 @@ const Dashboard = () => {
           {
              
             isAdmin ?
-              <>      <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
-                <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li></> : 
+              <>      <li><NavLink to="/dashboard/allstudent"> <FaUtensils></FaUtensils>Admin user</NavLink></li>
+                <li><NavLink to="/dashboard/myclass"> <FaWallet></FaWallet>admin Classes</NavLink></li></> : 
 
                 isInstructor ?
-                <>      <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
-                  <li><NavLink to="/dashboard/allclass">My Class</NavLink></li>
+                <>      <li><NavLink to="/dashboard/addclass"><FaUsers></FaUsers>instractor</NavLink></li>
+                  <li><NavLink to="/dashboard/allclass"> <FaBook></FaBook>My Class</NavLink></li>
                   </> :
           
           
             user  ?
-              <>      <li><NavLink to='/dashboard/myselectedclasses'>myselectedclasses</NavLink></li>
-                <li><NavLink >user </NavLink></li></> :null
+              <>      <li><NavLink to='/dashboard/myselectedclasses'><FaWallet></FaWallet>myselectedclasses</NavLink></li>
+                <li><NavLink  to="/dashboard/paymenthistory">payment history </NavLink></li></> :null
             
           }
                 <div className="divider"></div>
- <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
- <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
- <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li>
- <li><Link to='/'>Home</Link></li>
+ 
+ <li><Link to='/'> <FaHome></FaHome>Home</Link></li>
+ <li><NavLink to='/dashboard/myselectedclasses'><FaWallet></FaWallet>myselectedclasses</NavLink></li>
+ <li><NavLink  to="/dashboard/paymenthistory">payment history </NavLink></li>
         </ul>
 
       </div>
