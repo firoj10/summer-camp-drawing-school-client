@@ -1,6 +1,8 @@
 
 import Banner from "../Banner/Banner";
-import BannerA from "../Banner/BannerA";
+
+import PopularInstructors from "../PopularInstructors/PopularInstructors";
+import PopularClass from "./PopularClass/PopularClass";
 
 
 const Home = () => {
@@ -8,7 +10,9 @@ const Home = () => {
     return (
         <div>
           <Banner></Banner>
-          <BannerA></BannerA>
+          {/* <BannerA></BannerA> */}
+          <PopularInstructors></PopularInstructors>
+          <PopularClass></PopularClass>
         </div>
     );
 };

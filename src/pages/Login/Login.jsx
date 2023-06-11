@@ -5,6 +5,7 @@ import { RiEyeLine, RiEyeOffLine } from 'react-icons/ri';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -21,15 +22,15 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            // Swal.fire({
-            //     title: 'User Login Successful.',
-            //     showClass: {
-            //         popup: 'animate__animated animate__fadeInDown'
-            //     },
-            //     hideClass: {
-            //         popup: 'animate__animated animate__fadeOutUp'
-            //     }
-            // });
+            Swal.fire({
+                title: 'User Login Successful.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            });
             navigate(from, { replace: true });
         })
         

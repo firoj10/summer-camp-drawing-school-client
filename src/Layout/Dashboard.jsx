@@ -58,6 +58,7 @@ const Dashboard = () => {
                 <li><NavLink >user </NavLink></li></> )} */}
  <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
  <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
+ <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li>
         </ul>
 
       </div>

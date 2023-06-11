@@ -80,7 +80,7 @@ const MySelectedClasses = () => {
                                 </td>
                                 <td>{item.price}</td>
                                 <td>
-                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost btn-lg bg-red-500 text-white"><FaTrashAlt></FaTrashAlt></button>
+                                    <button onClick={() => handleDelete(item)} className="btn btn-xs btn-accent text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
                                 <Link to={`/dashboard/payment/${item._id}`}><button className="btn btn-worning btn-sm">PaY</button> </Link>
                              

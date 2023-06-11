@@ -1,5 +1,6 @@
 import {useContext} from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddClass = () => {
@@ -36,7 +37,15 @@ const AddClass = () => {
                     .then(data => {
                         console.log(data)
                         if (data.insertedId) {
-                           alert('add successfull')
+                            Swal.fire({
+                                title: 'class Added Successful.',
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown'
+                                },
+                                hideClass: {
+                                    popup: 'animate__animated animate__fadeOutUp'
+                                }
+                            });
                         }
                     })
             }
