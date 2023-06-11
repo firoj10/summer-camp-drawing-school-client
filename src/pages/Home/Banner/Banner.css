@@ -1,0 +1,28 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .slider-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slider-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .slider-content p {
+    margin-bottom: 10px;
+  }
+  
+  .slider-controls button {
+    margin: 5px;
+  }
+  

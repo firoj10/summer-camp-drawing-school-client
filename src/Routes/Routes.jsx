@@ -13,6 +13,7 @@ import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
 import MySelectedClasses from "../pages/DashBoard/MySelectedClasses/MySelectedClasses";
 import Payment from "../Payment/Payment";
+import MyClass from "../pages/DashBoard/MyClass/MyClass";
 
 
  
@@ -61,8 +62,8 @@ import Payment from "../Payment/Payment";
       
       },
       {
-        path: "myselectedclasses",
-        element: <MySelectedClasses></MySelectedClasses>
+        path: "myclass",
+        element: <MyClass></MyClass>
       },
       {
         path: "myselectedclasses",

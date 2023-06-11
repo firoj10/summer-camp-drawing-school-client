@@ -57,7 +57,7 @@ const AllStudent = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                              <td>{user.role === 'admin' ? 'admin' :
-                                <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost btn-lg bg-orange-400 text-white"> student</button>
+                                <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost btn-lg bg-orange-400 text-white"> admin</button>
 
                             }
                             {user.role === 'instructor' ? 'instructor' :

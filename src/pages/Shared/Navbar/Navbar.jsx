@@ -9,7 +9,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   const [isAdmin] = useAdmin()
   const [isInstructor] = useInstructor()
-
+ console.log( 'admin',isAdmin, isInstructor, '........................')
   const handleLogout = ()=>{
     logOut()
     .then(()=>{})

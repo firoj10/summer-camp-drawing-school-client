@@ -3,7 +3,7 @@ import useCart from '../../../hooks/useCart';
 const MyClass = () => {
     const [myClass]= useCart()
 
-    const handleMakeStatus = user => {
+    const handleMakeApprove = user => {
         fetch(`http://localhost:5000/allclass/${user?._id}`,{
           method: 'PATCH'
         })
@@ -11,7 +11,19 @@ const MyClass = () => {
         .then(data =>{
           if(data.modifiedCount){
              alert('admin success full')
-             console.log('aaaaaaaaaaaaaaaaa')  
+         
+          }
+        })
+      }
+    const handleMakeDenay = user => {
+        fetch(`http://localhost:5000/allclass/denay/${user?._id}`,{
+          method: 'PATCH'
+        })
+        .then(res=> res.json())
+        .then(data =>{
+          if(data.modifiedCount){
+             alert('denay success full')
+         
           }
         })
       }
@@ -47,9 +59,10 @@ const MyClass = () => {
                         <td>{user.price}</td>
                         <td> 
                        <div className='flex'>
-                       <button onClick={() => handleMakeStatus(user)} className="btn btn-xs mx-2  btn-primary">Approve</button>
-                                    <button className="btn btn-xs btn-secondary">Denay</button>
-                                    <button className="btn btn-xs btn-accent">panding</button>
+                       <button onClick={() => handleMakeApprove(user)} className="btn btn-xs mx-2  btn-primary">Approve</button>
+                       <button onClick={() => handleMakeDenay(user)} className="btn btn-xs mx-2  btn-primary">Denay</button>
+                                    {/* <button className="btn btn-xs btn-secondary">Denay</button>
+                                    <button className="btn btn-xs btn-accent">panding</button> */}
                        </div>
                         </td>  
                     </tr>)}

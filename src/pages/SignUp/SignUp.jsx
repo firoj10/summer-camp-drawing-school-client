@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
   const {
@@ -34,13 +35,13 @@ const SignUp = () => {
               .then(data => {
                 if (data.insertedId) {
                   // reset()
-                  // Swal.fire({
-                  //   position: 'top-end',
-                  //   icon: 'success',
-                  //   title: 'User created',
-                  //   showConfirmButton: false,
-                  //   timer: 1500
-                  // })
+                  Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User created',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                   navigate('/')
                 }
               })
