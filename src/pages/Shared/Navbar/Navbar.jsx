@@ -24,12 +24,12 @@ const Navbar = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/ins'>Instructors</Link></li>
-          <li><Link to='/classes'>Classes</Link></li>
+            <li><Link className="text-lg font-bold" to='/'>Home</Link></li>
+            <li><Link className="text-lg font-bold" to='/ins'>Instructors</Link></li>
+          <li><Link className="text-lg font-bold" to='/classes'>Classes</Link></li>
 
             {
-              isAdmin || isInstructor || user ? <li><Link to="/dashboard">Dashboard</Link></li> : null
+              isAdmin || isInstructor || user ? <li><Link className="text-lg font-bold" to="/dashboard">Dashboard</Link></li> : null
             }
           </ul>
         </div>
@@ -38,12 +38,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/ins'>Instructors</Link></li>
-          <li><Link to='/classes'>Classes</Link></li>
+          <li><Link className="text-lg font-bold" to='/'>Home</Link></li>
+          <li><Link className="text-lg font-bold" to='/ins'>Instructors</Link></li>
+          <li><Link className="text-lg font-bold" to='/classes'>Classes</Link></li>
 
           {
-            isAdmin || isInstructor || user ? <li><Link to="/dashboard">Dashboard</Link></li> : null
+            isAdmin || isInstructor || user ? <li><Link className="text-lg font-bold" to="/dashboard">Dashboard</Link></li> : null
           }
         </ul>
       </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
     <img src={user?.photoURL}  className='rounded-full h-12  mx-2 w-12 ' alt="img"  />
   <button onClick={handleLogout} className="btn btn-active md:text-xl text-xs btn-ghost">Log Out</button>
   </> :<>
-  <Link className="text-xs md:text-xl font-bold" to="/login">Login</Link>
+  <Link className=" text-lg   font-bold" to="/login">Login</Link>
   </>
  }
       </div>

@@ -14,6 +14,7 @@ import Classes from "../pages/Classes/Classes";
 import MySelectedClasses from "../pages/DashBoard/MySelectedClasses/MySelectedClasses";
 import Payment from "../Payment/Payment";
 import MyClass from "../pages/DashBoard/MyClass/MyClass";
+import AllClass from "../pages/DashBoard/AllClass/AllClass";
 
 
  
@@ -64,6 +65,10 @@ import MyClass from "../pages/DashBoard/MyClass/MyClass";
       {
         path: "myclass",
         element: <MyClass></MyClass>
+      },
+      {
+        path: "allclass",
+        element: <AllClass></AllClass>
       },
       {
         path: "myselectedclasses",

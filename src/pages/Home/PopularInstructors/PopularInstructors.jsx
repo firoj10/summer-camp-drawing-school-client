@@ -14,7 +14,8 @@ const PopularInstructors = () => {
     }, []);
     return (
         <div>
-             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <h1 className='text-4xl text-center py-20'>Popular Instructors Section</h1>
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
   {populars?.slice(0, 6).map((popular) => (
 
   <PopularCard key={popular._id} popular={popular}></PopularCard>

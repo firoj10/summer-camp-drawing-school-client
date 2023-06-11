@@ -1,8 +1,7 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-// import useInstructor from "../hooks/useInstructor";
 import useInstructor from "../hooks/useInstructor";
 
 const Dashboard = () => {
@@ -29,6 +28,7 @@ const Dashboard = () => {
             isAdmin ?
               <>      <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
                 <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li></> : 
+
                 isInstructor ?
                 <>      <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
                   <li><NavLink to="/dashboard/allclass">My Class</NavLink></li>
@@ -44,6 +44,7 @@ const Dashboard = () => {
  <li><NavLink to="/dashboard/addclass">instractor</NavLink></li>
  <li><NavLink to="/dashboard/allstudent">Admin user</NavLink></li>
  <li><NavLink to="/dashboard/myclass">admin Classes</NavLink></li>
+ <li><Link to='/'>Home</Link></li>
         </ul>
 
       </div>

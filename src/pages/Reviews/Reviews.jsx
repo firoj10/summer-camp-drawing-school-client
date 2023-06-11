@@ -3,7 +3,9 @@ import img from '../../assets/ex2.jpg';
 
 const Reviews = () => {
   return (
-    <div className="md:flex ">
+   <div className='py-14'>
+      <h1 className='text-4xl text-center py-20'>Review Section</h1>
+     <div className="md:flex ">
       <div>
         <img src={img} alt="Review" className="object-cover rounded-md" />
       </div>
@@ -13,6 +15,7 @@ const Reviews = () => {
    
       </div>
     </div>
+   </div>
   );
 };
 

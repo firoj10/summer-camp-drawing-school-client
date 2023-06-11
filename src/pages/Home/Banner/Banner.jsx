@@ -15,8 +15,9 @@ const Banner = () => {
        
         </div> 
         <div id="item2" className="carousel-item w-full">
-          <img src={img2} className="w-full" />
-          <h2 className=''>amar  sonar bangla</h2>
+     
+        <img src={img2} className="w-full" />
+         
         </div> 
         <div id="item3" className="carousel-item w-full">
           <img src={img3} className="w-full" />
