@@ -68,29 +68,37 @@ const SignUp = () => {
 
   return (
     <div>
-      <h2>Registration</h2>
-
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h2 className='text-bold px-5 pt-10'>Registration</h2>
+      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <form className='card-body' onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-control">
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" {...register('name', { required: true })} />
+        <input type="text" id="name" className="input input-bordered" placeholder="name"   {...register('name', { required: true })} />
         {errors.name && <span>Name is required</span>}
-
+        </div>
+        <div className="form-control">
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" {...register('email', { required: true })} />
+        <input type="email" id="email" className="input input-bordered" placeholder="email"   {...register('email', { required: true })} />
         {errors.email && <span>Email is required</span>}
-
+        </div>
+        <div className="form-control">
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
-          {...register('password', { required: true, validate: validatePassword })}
+          placeholder="password" 
+          className="input input-bordered" 
+          {...register('password',  { required: true, validate: validatePassword })}
         />
         {errors.password && <span>{errors.password.message}</span>}
-
+        </div>
+        <div className="form-control">
         <label htmlFor="confirmPassword">Confirm Password:</label>
         <input
           type="password"
+          placeholder="confirmPassword" 
           id="confirmPassword"
+          className="input input-bordered" 
           {...register('confirmPassword', {
             required: true,
             validate: (value) =>
@@ -98,12 +106,14 @@ const SignUp = () => {
           })}
         />
         {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
-
+        </div>
+        <div className="form-control">
         <label htmlFor="photoUrl">Photo URL:</label>
-        <input type="url" id="photoUrl" placeholder='photo url' {...register('url')} />
-
+        <input className="input input-bordered"   placeholder="confirphotoUrlmPassword"   type="url" id="photoUrl"  {...register('url')} />
+        </div>
         <input type="submit" className='p-10' value="Register" />
       </form>
+    </div>
     </div>
   );
 };

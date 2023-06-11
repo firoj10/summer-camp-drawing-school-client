@@ -9,7 +9,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   const [isAdmin] = useAdmin()
   const [isInstructor] = useInstructor()
- console.log( 'admin',isAdmin, isInstructor, '........................')
+
   const handleLogout = ()=>{
     logOut()
     .then(()=>{})
@@ -34,7 +34,7 @@ const Navbar = () => {
           </ul>
         </div>
        
-        <a className="btn btn-ghost normal-case text-xl"> Drawing School</a>
+        <a className="btn btn-ghost normal-case p-0 m-0 text-xs md:text-xl"> Drawing School</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -51,10 +51,10 @@ const Navbar = () => {
       {
   
   user ? <>
-    <img src={user?.photoURL}  className='rounded-full h-12  mx-2 w-12' alt="img"  />
-  <button onClick={handleLogout} className="btn btn-active btn-ghost">Log Out</button>
+    <img src={user?.photoURL}  className='rounded-full h-12  mx-2 w-12 ' alt="img"  />
+  <button onClick={handleLogout} className="btn btn-active md:text-xl text-xs btn-ghost">Log Out</button>
   </> :<>
-  <li><Link to="/login">Login</Link></li>
+  <Link className="text-xs md:text-xl font-bold" to="/login">Login</Link>
   </>
  }
       </div>

@@ -14,7 +14,7 @@ const PopularClass = () => {
     }, []);
     return (
         <div>    
-  <div className="grid grid-cols-3 gap-4 py-10">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {popularclasses?.slice(0, 6).map((classe) => (
   <PopularClassard key={classe._id} classe={classe} />
 ))}
