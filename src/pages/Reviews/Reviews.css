@@ -1,0 +1,24 @@
+.review-container {
+    opacity: 0;
+    transform: scale(0.8); /* Initial scale: 80% */
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .review-container.fade-in {
+    opacity: 1;
+    transform: scale(1); /* Final scale: 100% */
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .review-container.slide-up {
+    animation: slide-up 1s ease-in forwards;
+  }
+  

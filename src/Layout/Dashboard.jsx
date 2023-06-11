@@ -45,7 +45,7 @@ const Dashboard = () => {
  
  <li><Link to='/'> <FaHome></FaHome>Home</Link></li>
  <li><NavLink to='/dashboard/myselectedclasses'><FaWallet></FaWallet>myselectedclasses</NavLink></li>
- <li><NavLink  to="/dashboard/paymenthistory">payment history </NavLink></li>
+ <li><NavLink to="/dashboard/allstudent"> <FaUtensils></FaUtensils>Admin user</NavLink></li>
         </ul>
 
       </div>

@@ -72,11 +72,11 @@ const Login = () => {
                 </div>
                 {errors.password && <span>Password is required</span>}
 
-              
+                
 
-                <input type="submit "  className='btn btn-active btn-accent' value="Login" />
+                <input type="submit"  className='btn' value="Login" />
                 <SocialLogin></SocialLogin>
-                <p>create a new user<Link to='/signup'>Signup</Link></p>
+                <p>create a new user<Link className='font-bold' to='/signup'>Signup</Link></p>
             </form>
             </div>
 
