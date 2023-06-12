@@ -7,7 +7,7 @@ const Classes = () => {
     const [classes, setClasses] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allclass/approve')
+        fetch('https://summer-camp-droing-school-server-firoj10.vercel.app/allclass/approve')
             .then((res) => res.json())
             .then((data) => {
                 setClasses(data);
@@ -15,7 +15,7 @@ const Classes = () => {
             });
     }, []);
     return (
-        <div>    
+        <div className="py-8">    
   <div className="grid grid-cols-1  md:grid-cols-3  gap-4">
   {classes?.map((classe) => (
   <ClassesCart key={classe._id} classe={classe} />

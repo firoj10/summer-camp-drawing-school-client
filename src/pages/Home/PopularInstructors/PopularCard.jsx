@@ -1,9 +1,18 @@
+import { motion } from "framer-motion";
 
 
 const PopularCard = ({ popular }) => {
   return (
     <div className="">
-      <div className="card card-compact bg-base-100 shadow-xl">
+<motion.div
+initial={{ opacity: 0, scale: 0.5 }}
+animate={{ opacity: 1, scale: 1 }}
+transition={{ duration: 1 }}
+whileHover={{ scale: 1.1 }}
+whileTap={{ scale: 0.9 }}
+className="card"
+>
+<div className="card card-compact bg-base-100 shadow-xl">
         <figure>
           <img src={popular?.photo} alt="Shoes" />
         </figure>
@@ -12,8 +21,15 @@ const PopularCard = ({ popular }) => {
           <p>{popular?.email}</p>
         </div>
       </div>
+</motion.div>
     </div>
   );
 };
 
 export default PopularCard;
+
+
+
+
+
+

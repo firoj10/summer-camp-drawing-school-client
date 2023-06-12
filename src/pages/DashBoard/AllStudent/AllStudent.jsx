@@ -8,12 +8,12 @@ const AllStudent = () => {
   const [disabledButtons, setDisabledButtons] = useState([]);
   
     const { data: student = [], refetch } = useQuery(['student'], async () => {
-        const res = await axios.get('http://localhost:5000/student')
+        const res = await axios.get('https://summer-camp-droing-school-server-firoj10.vercel.app/student')
         return res.data;
     })
 
     const handleMakeAdmin = user => {
-      fetch(`http://localhost:5000/student/admin/${user?._id}`,{
+      fetch(`https://summer-camp-droing-school-server-firoj10.vercel.app/student/admin/${user?._id}`,{
         method: 'PATCH'
       })
       .then(res=> res.json())
@@ -35,7 +35,7 @@ const AllStudent = () => {
       })
     }
     const handleMakeInstructor = user => {
-      fetch(`http://localhost:5000/student/instructor/${user?._id}`,{
+      fetch(`https://summer-camp-droing-school-server-firoj10.vercel.app/student/instructor/${user?._id}`,{
         method: 'PATCH'
       })
       .then(res=> res.json())

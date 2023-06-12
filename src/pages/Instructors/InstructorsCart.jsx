@@ -1,9 +1,18 @@
+import { motion } from "framer-motion";
 
 
 const InstructorsCart = ({ instructor }) => {
     return (
      <div className="">
-           <div className="card card-compact w-96 bg-base-100 shadow-xl ">
+<motion.div
+initial={{ opacity: 0, scale: 0.5 }}
+animate={{ opacity: 1, scale: 1 }}
+transition={{ duration: 0.5 }}
+whileHover={{ scale: 1.1 }}
+whileTap={{ scale: 0.9 }}
+className="card"
+>
+<div className="card card-compact w-96 bg-base-100 shadow-xl ">
 
 <figure><img src={instructor?.photo} alt="Shoes" /></figure>
 <div className="card-body">
@@ -12,8 +21,12 @@ const InstructorsCart = ({ instructor }) => {
    
 </div>
 </div>
+</motion.div>
      </div>
     );
 };
 
 export default InstructorsCart;
+
+
+

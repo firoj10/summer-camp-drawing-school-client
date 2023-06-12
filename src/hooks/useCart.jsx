@@ -5,7 +5,7 @@ const useCart = () => {
 const [myClass, setmyClass] = useState(null);
 
 useEffect(() => {
-  fetch('http://localhost:5000/allclass')
+  fetch('https://summer-camp-droing-school-server-firoj10.vercel.app/allclass')
     .then((res) => res.json())
     .then((data) => {
         setmyClass(data);

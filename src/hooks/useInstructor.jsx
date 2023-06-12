@@ -11,8 +11,8 @@ const useInstructor= () => {
           queryKey: ['isInstructor', user?.email],
           enabled: !loading,
           queryFn: async ()=>{
-            const res = await axios.get(`http://localhost:5000/student/instructor/teacher/${user?.email}`)
-            // const res = await axios.get('http://localhost:5000/student/instructor/teacher/ahsasan@gmail.com')
+            const res = await axios.get(`https://summer-camp-droing-school-server-firoj10.vercel.app/student/instructor/teacher/${user?.email}`)
+            // const res = await axios.get('https://summer-camp-droing-school-server-firoj10.vercel.app/student/instructor/teacher/ahsasan@gmail.com')
             console.log('is admin response ', res)
          return res.data.instructor;
         }

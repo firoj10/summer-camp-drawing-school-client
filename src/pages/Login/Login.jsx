@@ -41,8 +41,8 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login Form</h2>
+        <div className='py-10'>
+            <h2 className='text-2xl'>Login Form</h2>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className='card-body' onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">

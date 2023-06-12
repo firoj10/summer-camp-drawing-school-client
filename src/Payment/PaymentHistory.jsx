@@ -4,7 +4,7 @@ const PaymentHistory = () => {
   const [payments, setPayments] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/payments')
+    fetch('https://summer-camp-droing-school-server-firoj10.vercel.app/payments')
       .then((res) => res.json())
       .then((data) => {
         const sortedData = data.sort((a, b) => b.transactionId - a.transactionId);

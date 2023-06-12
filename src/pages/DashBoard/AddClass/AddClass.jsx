@@ -26,7 +26,7 @@ const AddClass = () => {
                
                // send data to server
 
-                fetch('http://localhost:5000/addclass', {
+                fetch('https://summer-camp-droing-school-server-firoj10.vercel.app/addclass', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 import { useSpring, animated } from 'react-spring';
 import img from '../../assets/ex2.jpg';
@@ -19,7 +20,14 @@ const Reviews = () => {
 
   return (
     <div className='py-14'>
-      <h1 className='text-4xl text-center py-20'>Review Section</h1>
+       <motion.h1
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
+            >
+               <h1 className='text-4xl text-center py-20'>Review Section</h1>
+            </motion.h1>
+     
       <div className="md:flex">
         <animated.div style={imageAnimation}>
           <img src={img} alt="Review" className="object-cover rounded-md" />

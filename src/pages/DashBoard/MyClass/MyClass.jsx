@@ -7,7 +7,7 @@ const MyClass = () => {
     const [disabledButtons, setDisabledButtons] = useState([]);
 
     const handleMakeApprove = user => {
-        fetch(`http://localhost:5000/allclass/${user?._id}`,{
+        fetch(`https://summer-camp-droing-school-server-firoj10.vercel.app/allclass/${user?._id}`,{
           method: 'PATCH'
         })
         .then(res=> res.json())
@@ -29,7 +29,7 @@ const MyClass = () => {
         })
       }
     const handleMakeDenay = user => {
-        fetch(`http://localhost:5000/allclass/denay/${user?._id}`,{
+        fetch(`https://summer-camp-droing-school-server-firoj10.vercel.app/allclass/denay/${user?._id}`,{
           method: 'PATCH'
         })
         .then(res=> res.json())

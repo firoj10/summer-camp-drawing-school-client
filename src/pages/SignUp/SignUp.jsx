@@ -24,7 +24,7 @@ const SignUp = () => {
         updateUserProfile(data.name, data.url)
           .then(() => {
             const saveUser = { name: data.name, email: data.email, photo: data.url }
-            fetch('http://localhost:5000/student', {
+            fetch('https://summer-camp-droing-school-server-firoj10.vercel.app/student', {
               method: "POST",
               headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const SignUp = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
-                  // navigate('/')
+                  navigate('/')
                 }
               })
             // console.log('user profile updated')

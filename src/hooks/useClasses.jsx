@@ -8,7 +8,7 @@ const useClasses = () => {
   const { user, loading } = useContext(AuthContext);
 
   const fetchClasses = async () => {
-    const response = await axios.get(`http://localhost:5000/selectclass/${user?.email}`);
+    const response = await axios.get(`https://summer-camp-droing-school-server-firoj10.vercel.app/selectclass/${user?.email}`);
     return response.data;
   };
 
