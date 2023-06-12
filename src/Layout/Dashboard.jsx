@@ -21,7 +21,7 @@ const Dashboard = () => {
         <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
       </div>
-      <div className="drawer-side  bg-[#D1A054]">
+      <div className="drawer-side bg-base-300 text-base-content">
         <label htmlFor="my-drawer-2" className=""></label>
         <ul className="menu p-4 w-80 h-full   pt-[100px]  text-black ">
           {

@@ -16,6 +16,7 @@ import Payment from "../Payment/Payment";
 import MyClass from "../pages/DashBoard/MyClass/MyClass";
 import AllClass from "../pages/DashBoard/AllClass/AllClass";
 import PaymentHistory from "../Payment/PaymentHistory";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
  
@@ -25,6 +26,7 @@ import PaymentHistory from "../Payment/PaymentHistory";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage />,
       children:[
         {
             path:'/',
