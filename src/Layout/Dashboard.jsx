@@ -37,7 +37,7 @@ const Dashboard = () => {
           
             user  ?
               <>      <li><NavLink to='/dashboard/myselectedclasses'><FaWallet></FaWallet>My Selected Classes</NavLink></li>
-                <li><NavLink  to="/dashboard/paymenthistory">payment history </NavLink></li></> :null
+                <li><NavLink  to="/dashboard/paymenthistory"><FaUtensils></FaUtensils>payment history </NavLink></li></> :null
             
           }
                 <div className="divider"></div>

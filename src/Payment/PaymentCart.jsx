@@ -10,7 +10,7 @@ const PaymentCart = ({item}) => {
     return (
         <div>
    
-            <h2 className="text-3xl"> Teka o teka tumi uira uira aso...</h2>
+            <h2 className="text-3xl"> Student Payment ...</h2>
             <Elements stripe={stripePromise}>
             <CheckoutForm  item={item}></CheckoutForm>
             </Elements>

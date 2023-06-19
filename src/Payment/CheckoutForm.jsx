@@ -15,20 +15,6 @@ const CheckoutForm = ({ item }) => {
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState('');
 
-//   useEffect(() => {
-//     if (prices > 0) {
-//       axios
-//         .post('/create-payment-intent', { prices })
-//         .then((res) => {
-//           console.log(res.data.clientSecret);
-//           setClientSecret(res.data.clientSecret);
-//         })
-//         .catch((error) => {
-//           console.log('Error fetching client secret:', error);
-//         });
-//     }
-//   }, [prices]);
-
 useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://summer-camp-droing-school-server-firoj10.vercel.app/create-payment-intent", {
@@ -123,7 +109,7 @@ useEffect(() => {
 
   return (
     <>
-      <form className="w-2/3 m-8" onSubmit={handleSubmit}>
+      <form className="w-full m-8" onSubmit={handleSubmit}>
         <CardElement
           options={{
             style: {
