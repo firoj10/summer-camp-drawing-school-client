@@ -6,7 +6,7 @@ import useClasses from "../../../hooks/useClasses";
 
 const MySelectedClasses = () => {
     const [classes, refetch] = useClasses()
-    // const total = cart.reduce((sum, item) => item.price + sum, 0)
+  
 
 
 
