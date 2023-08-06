@@ -18,7 +18,7 @@ className="card"
 <div className="card-body">
     <h2 className="card-title">{instructor.name}</h2>
     <p>{instructor.email}</p>
-   
+    <button className="btn btn-outline btn-info">Get Started</button>
 </div>
 </div>
 </motion.div>

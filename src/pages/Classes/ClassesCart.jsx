@@ -75,12 +75,12 @@ const ClassesCart = ({ classe }) => {
             <p>Available seats: {availableseats}</p>
             <p>Price: ${price}</p>
             <div className="card-actions justify-end">
-              <button onClick={() => handleAddToSelect(classe)} className="btn btn-primary">Select Class</button>
+              <button onClick={() => handleAddToSelect(classe)} className="btn  btn-info">Select Class</button>
             </div>
           </div>
         </div>
       </motion.div>
-    </div>
+    </div> 
   );
 };
 

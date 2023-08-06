@@ -21,6 +21,7 @@ className="card"
             <h2 className="card-title"> Class Name: {classe.classname}</h2>
             <p> Price: ${classe.price}</p>
             <p> Seats: {classe.availableseats}</p>
+            <button className="btn btn-outline text-left btn-info">Details</button>
           </div>
         </div>
 </motion.div>

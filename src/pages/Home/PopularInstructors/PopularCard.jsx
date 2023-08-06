@@ -14,11 +14,13 @@ className="card"
 >
 <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
-          <img src={popular?.photo} alt="Shoes" />
+          <img src={popular?.photo} className="md:h-[200px]" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{popular?.name}</h2>
-          <p>{popular?.email}</p>
+          <h2 className=" text-lg font-bold ">{popular?.name}</h2>
+          <p className="">{popular?.email}</p>
+         
+          <button className="btn btn-outline text-left btn-info">Details</button>
         </div>
       </div>
 </motion.div>

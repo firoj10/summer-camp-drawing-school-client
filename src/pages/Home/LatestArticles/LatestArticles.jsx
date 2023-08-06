@@ -42,7 +42,7 @@ const LatestArticles = () => {
                             <h2 className="card-title py-3">Education Week News and Views on Education Policy and Practice.</h2>
 
                             <div className="card-actions ">
-                                <button className="btn outline-offset-3 btn-outline">Buy Now</button>
+                            <button className="btn btn-outline btn-info">Details</button>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const LatestArticles = () => {
                             <h2 className="card-title py-3">The Learning Network Teaching and Learning With The New York Times.</h2>
 
                             <div className="card-actions ">
-                                <button className="btn outline-offset-3 btn-outline">Buy Now</button>
+                            <button className="btn btn-outline btn-info">Details</button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const LatestArticles = () => {
                         <h2 className="card-title py-2">Only One Thing Impossible For God Find Sense in Any.</h2>
 
                         <div className="card-actions ">
-                            <button className="btn outline-offset-3 btn-outline">Buy Now</button>
+                        <button className="btn btn-outline btn-info">Details</button>
                         </div>
                     </div>
 

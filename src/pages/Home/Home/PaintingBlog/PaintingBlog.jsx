@@ -46,7 +46,8 @@ const PaintingBlog = () => {
               <h3 className="text-lg font-bold mb-2">{post.title}</h3>
               <p className="text-gray-500 mb-2">{post.date}</p>
               <p className="text-gray-700">{post.content}</p>
-              <button className='p-4 bg-light'>Details</button>
+              {/* <button className='p-4 bg-light'>Details</button> */}
+              {/* <button className="btn btn-outline btn-info">Details</button> */}
             </div>
           ))}
         </div>
